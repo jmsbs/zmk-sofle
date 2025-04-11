@@ -56,6 +56,13 @@
         bindings = <&kp LEFT_BRACKET>, <&kp BACKSLASH>;
     };
 
+    USINT_tap_dance: USINT_tap_dance {
+        compatible = "zmk,behavior-tap-dance";
+        label = "USINT_tap_dance";
+        #binding-cells = <0>;
+        bindings = <&kp GRAVE>, <&kp TILDE>;
+    };
+
     behaviors {
     };
 
@@ -64,7 +71,7 @@
 
         layer0 {
             bindings = <
-&kp NON_US_HASH  &kp N1    &kp N2        &kp N3     &kp N4  &kp N5       &kp UP_ARROW     &kp N6   &kp N7    &kp N8     &nine_tap_dance  &zero_tap_dance  &kp BACKSPACE
+&USINT_tap_dance  &kp N1    &kp N2        &kp N3     &kp N4  &kp N5       &kp UP_ARROW     &kp N6   &kp N7    &kp N8     &nine_tap_dance  &zero_tap_dance  &kp BACKSPACE
 &kp TAB          &kp Q     &kp W         &kp E      &kp R   &kp T        &kp DOWN_ARROW   &kp Y    &kp U     &kp I      &kp O            &kp P            &pipe_tap_dance
 &kp LSHIFT       &kp A     &kp S         &kp D      &kp F   &kp G        &kp LEFT_ARROW   &kp H    &kp J     &kp K      &kp L            &kp SEMI         &kp APOS
 &kp LCTRL        &kp Z     &kp X         &kp C      &kp V   &kp B        &kp RIGHT_ARROW  &kp N    &kp M     &kp COMMA  &kp DOT          &kp FSLH         &kp RIGHT_BRACKET
