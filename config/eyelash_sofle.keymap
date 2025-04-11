@@ -59,6 +59,25 @@
     behaviors {
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        ESC_MACRO {
+            bindings = <&kp ESC>;
+            key-positions = <0 13>;
+            layers = <0>;
+        };
+    };
+
+    macros {
+        esc_macro: esc_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "ESC_MACRO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -77,11 +96,11 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mmv MOVE_UP     &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &trans
-&trans      &kp GRAVE        &mkp LCLK       &mkp MCLK        &mkp RCLK        &mkp MB4           &mmv MOVE_DOWN   &kp PG_UP        &kp END          &kp UP      &kp HOME   &kp MINUS         &kp EQUAL
-&trans      &kp TILDE        &trans          &trans           &trans           &mkp MB5           &mmv MOVE_LEFT   &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11    &kp F12           &trans
-&kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &trans           &trans           &trans      &trans     &trans
+&kp ESC     &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mmv MOVE_UP      &kp F6           &kp F7           &kp F8      &kp F9     &kp F10           &trans
+&trans      &kp K_UNDO       &kp K_CUT       &kp K_COPY       &kp K_PASTE      &mkp MB4           &mmv MOVE_DOWN    &kp PG_UP        &kp HOME         &kp UP      &kp END    &kp MINUS         &kp PRINTSCREEN
+&trans      &kp TILDE        &trans          &trans           &trans           &mkp MB5           &kp K_PREVIOUS    &kp PG_DN        &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SPI    &kp K_NEXT        &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp INSERT  &kp F11    &kp F12           &trans
+&kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &kp K_PLAY_PAUSE  &kp DELETE       &trans           &trans      &trans     &trans
             >;
 
             display-name = "layer1";
