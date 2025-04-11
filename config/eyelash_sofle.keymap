@@ -59,7 +59,15 @@
     behaviors {
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        ESC_MACRO {
+            bindings = <&kp ESC>;
+            key-positions = <0 13>;
+            layers = <0>;
+        };
+    };
 
     macros {
         esc_macro: esc_macro {
