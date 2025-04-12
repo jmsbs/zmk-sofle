@@ -61,12 +61,12 @@ layers:
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - MUTE
   - $$mdi:keyboard-esc$$
-  - HOME
+  - {t: '$$mdi:backspace$$', type: backspace}
   - '2'
   - END
   - $$mdi:apple-keyboard-option$$
   layer1:
-  - {t: '`', s: '~'}
+  - $$mdi:keyboard-esc$$
   - F1
   - F2
   - F3
